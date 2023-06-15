@@ -23,3 +23,9 @@ const backpack = {
 
 console.log("The backpack object:", backpack);
 console.log("The pocketNum value:", backpack.pocketNum);
+
+console.log("before-left:", backpack.strapLength.left);
+// 更改是通过更改函数内部的parameters，但是实际output的时候还是需要从对象里面的属性来调用
+backpack.newStrapLength(10, 30);
+// console.log("after-left:", backpack.newStrapLength.left);
+console.log("after-left:", backpack.strapLength.left);
