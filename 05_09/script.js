@@ -19,7 +19,7 @@ const everydayPack = new Backpack(
 );
 
 const content = `
-  <article class="backpack" id="everyday">
+   
     <figure class="backpack__image">
       <img src=${everydayPack.image} alt="" />
     </figure>
@@ -45,9 +45,22 @@ const content = `
         everydayPack.lidOpen
       }</span></li>
     </ul>
-  </article>
+
 `;
 
 const main = document.querySelector(".maincontent");
 
-main.innerHTML = content;
+// remove the wrapping around element "article"
+// in the content template literal:
+//  <article class="backpack" id="everyday">
+//  </article>
+
+// main.innerHTML = content;
+
+//create a new element called "article":
+const newArticle = document.createElement("article");
+newArticle.classList.add("backpack");
+newArticle.setAttribute("id", "everyday");
+newArticle.innerHTML = content; //把新建的元素element和template literal called "content"进行连接link
+
+main.append(newArticle);

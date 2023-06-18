@@ -19,6 +19,12 @@ const backpack = {
     this.strapLength.left = lengthLeft;
     this.strapLength.right = lengthRight;
   },
+
+  // Fary added this function:
+  hasThings: true,
+  isEmpty: function (emptyStatus) {
+    this.hasThings = emptyStatus;
+  },
 };
 
 console.log("The backpack object:", backpack);

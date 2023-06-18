@@ -37,4 +37,22 @@ class Backpack {
   }
 }
 
+class Female {
+  //define parameters
+  constructor(height, weight) {
+    //define properties:
+    this.height = height;
+    this.weight = weight;
+  }
+  // Add methods like normal functions:
+  toggleLid(lidStatus) {
+    this.lidOpen = lidStatus;
+  }
+  newStrapLength(lengthLeft, lengthRight) {
+    this.strapLength.left = lengthLeft;
+    this.strapLength.right = lengthRight;
+  }
+}
+
 export default Backpack;
+Female;

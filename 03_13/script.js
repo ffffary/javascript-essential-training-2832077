@@ -18,3 +18,8 @@ const everydayPack = new Backpack(
 
 console.log("The everydayPack object:", everydayPack);
 console.log("Date acquired:", everydayPack.dateAcquired);
+
+//Fary added this:
+import Book from "./Book.js";
+const book1 = new Book("Greeting", "Fary", "have fun");
+console.log("The everydayPack object:", book1);
